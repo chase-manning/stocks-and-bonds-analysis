@@ -48,7 +48,7 @@ def main():
     # log the highest value of x and the corresponding y
     max_x = max(x)
     max_y = y[x.index(max_x)]
-    print(f"Max value: {max_x}x at {max_y * 100}% bonds")
+    print(f"Max value: {max_x}x at {max_y}% bonds")
 
     # Chart the data
     plt.plot(y, x, linestyle='-', color='b', label='Line Plot')
