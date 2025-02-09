@@ -10,6 +10,7 @@ y = [obj["sp_composite_price"] for obj in data]
 plt.plot(x, y, marker='o', linestyle='-', color='b', label='Line Plot')
 
 # Adding labels and title
+plt.yscale('log')
 plt.xlabel('X-axis')
 plt.ylabel('Y-axis')
 plt.title('Simple Matplotlib Chart')
