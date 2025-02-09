@@ -6,6 +6,14 @@ start_amount = float(10_000)
 
 data = get_shiller_data.main()
 
+# Normalize the 'cape' data
+cape_values = [obj['cape'] for obj in data]
+min_cape = min(cape_values)
+max_cape = max(cape_values)
+
+for obj in data:
+    obj['cape'] = (obj['cape'] - min_cape) / (max_cape - min_cape)
+
 
 def main(bonds_ratio):
     stocks_ratio = float(1) - bonds_ratio
